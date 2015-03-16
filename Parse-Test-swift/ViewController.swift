@@ -8,21 +8,22 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource{
     @IBOutlet var tableView : UITableView!
     var pictures: NSArray = NSArray()
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView!.delegate = self
+        tableView!.dataSource = self
         self.loadData { (pictures, error) -> () in
             self.pictures = pictures
             self.tableView.reloadData()
            
         }
-        
-        tableView.dataSource=self;
-        tableView.delegate=self;
-        // Do any additional setup after loading the view, typically from a nib.
+
+//         Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,8 +31,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // Dispose of any resources that can be recreated.
     }
     func loadData(callback:([PFObject]!, NSError!) -> ())  {
+        
         NSLog("loadData")
-        var query: PFQuery = PFQuery(className: "monsuta")
+        var query: PFQuery = PFQuery(className:"monsuta")
         query.orderByAscending("createdAt")
         query.findObjectsInBackgroundWithBlock { (objects: [AnyObject]!, error: NSError!) -> Void in
             if (error != nil){
@@ -52,27 +54,23 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return pictures.count
     }
     
-//    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return self.pictures.count
-//    }
-    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as UITableViewCell
         var imageFile: PFFile? = self.pictures[indexPath.row].objectForKey("Image") as PFFile?
         imageFile?.getDataInBackgroundWithBlock({ (imageData, error) -> Void in
             if(error == nil) {
-                cell.imageView!.image = UIImage(data: imageData)
-                cell.textLabel!.text = self.pictures[indexPath.row].objectForKey("ImageName") as? String
+                cell.imageView!.image = UIImage(data: imageData)!
+                cell.textLabel!.text = self.pictures[indexPath.row].objectForKey("ImageName") as String?
             }
         })
         return cell
     }
 
     @IBAction func tapAddButton(sender: AnyObject) {
-        var object: PFObject = PFObject(className: "monsuta")
+        var object: PFObject = PFObject(className:"monsuta")
         object["ImageName"] = "PinkMonster"
         var imageData: NSData = UIImageJPEGRepresentation(UIImage(named: "pinkukyarakuta.png"), 0.1)
-        var file: PFFile = PFFile(name: "pinkukyarakuta.png", data: imageData)
+        var file: PFFile = PFFile(name:"pinkukyarakuta.png", data: imageData)
         object["Image"] = file
         object.saveInBackgroundWithBlock { (succeeded, error) -> Void in
             self.loadData { (pictures, error) -> () in
@@ -85,5 +83,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
 
     }
+    //音楽をparseにあげる
 }
 

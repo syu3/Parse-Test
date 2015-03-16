@@ -13,8 +13,9 @@
 		4B4CD13B1AADD5D700377D36 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B4CD13A1AADD5D700377D36 /* Images.xcassets */; };
 		4B4CD13E1AADD5D700377D36 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B4CD13C1AADD5D700377D36 /* LaunchScreen.xib */; };
 		4B4CD14A1AADD5D700377D36 /* Parse_Test_swiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4CD1491AADD5D700377D36 /* Parse_Test_swiftTests.swift */; };
-		4BF3AF8E1AB1B10600E3DFBC /* pinkukyarakuta.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BF3AF8D1AB1B10600E3DFBC /* pinkukyarakuta.png */; };
-		628072F98C70D7C4ED83F8A9 /* libPods-Parse-Test-swift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA920E1A61C239F8B42CC6A4 /* libPods-Parse-Test-swift.a */; };
+		4B8726701AB6B11700444AF6 /* pinkukyarakuta.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B87266F1AB6B11700444AF6 /* pinkukyarakuta.png */; };
+		4B8726721AB6FCEA00444AF6 /* libPods-Parse-Test-swift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B8726711AB6FCEA00444AF6 /* libPods-Parse-Test-swift.a */; };
+		4B8726741AB6FCF000444AF6 /* libPods-Parse-Test-swift-Bolts.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B8726731AB6FCF000444AF6 /* libPods-Parse-Test-swift-Bolts.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,9 +26,17 @@
 			remoteGlobalIDString = 4B4CD12D1AADD5D700377D36;
 			remoteInfo = "Parse-Test-swift";
 		};
+		4BDF13941AB531410002EFEA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4B4CD1261AADD5D700377D36 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4B4CD12D1AADD5D700377D36;
+			remoteInfo = "Parse-Test-swift";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4B1E06AB1AB5B32C007B761A /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		4B4CD12E1AADD5D700377D36 /* Parse-Test-swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Parse-Test-swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B4CD1321AADD5D700377D36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B4CD1331AADD5D700377D36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -38,11 +47,12 @@
 		4B4CD1431AADD5D700377D36 /* Parse-Test-swiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Parse-Test-swiftTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B4CD1481AADD5D700377D36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B4CD1491AADD5D700377D36 /* Parse_Test_swiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parse_Test_swiftTests.swift; sourceTree = "<group>"; };
+		4B87266F1AB6B11700444AF6 /* pinkukyarakuta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pinkukyarakuta.png; sourceTree = "<group>"; };
+		4B8726711AB6FCEA00444AF6 /* libPods-Parse-Test-swift.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-Parse-Test-swift.a"; path = "Pods/../build/Debug-iphoneos/libPods-Parse-Test-swift.a"; sourceTree = "<group>"; };
+		4B8726731AB6FCF000444AF6 /* libPods-Parse-Test-swift-Bolts.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-Parse-Test-swift-Bolts.a"; path = "Pods/../build/Debug-iphoneos/libPods-Parse-Test-swift-Bolts.a"; sourceTree = "<group>"; };
 		4B95819C1AADD9FC00E5B7D2 /* Parse-Test-swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Parse-Test-swift-Bridging-Header.h"; sourceTree = "<group>"; };
-		4BF3AF8D1AB1B10600E3DFBC /* pinkukyarakuta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pinkukyarakuta.png; sourceTree = "<group>"; };
 		56775EA95E31B020787B2E40 /* Pods-Parse-Test-swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Parse-Test-swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-Parse-Test-swift/Pods-Parse-Test-swift.release.xcconfig"; sourceTree = "<group>"; };
 		7C68051440029E2DFA6CFADE /* Pods-Parse-Test-swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Parse-Test-swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Parse-Test-swift/Pods-Parse-Test-swift.debug.xcconfig"; sourceTree = "<group>"; };
-		DA920E1A61C239F8B42CC6A4 /* libPods-Parse-Test-swift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Parse-Test-swift.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,7 +60,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				628072F98C70D7C4ED83F8A9 /* libPods-Parse-Test-swift.a in Frameworks */,
+				4B8726741AB6FCF000444AF6 /* libPods-Parse-Test-swift-Bolts.a in Frameworks */,
+				4B8726721AB6FCEA00444AF6 /* libPods-Parse-Test-swift.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,7 +87,6 @@
 		4B4CD1251AADD5D700377D36 = {
 			isa = PBXGroup;
 			children = (
-				4BF3AF8D1AB1B10600E3DFBC /* pinkukyarakuta.png */,
 				4B4CD1301AADD5D700377D36 /* Parse-Test-swift */,
 				4B4CD1461AADD5D700377D36 /* Parse-Test-swiftTests */,
 				4B4CD12F1AADD5D700377D36 /* Products */,
@@ -97,6 +107,7 @@
 		4B4CD1301AADD5D700377D36 /* Parse-Test-swift */ = {
 			isa = PBXGroup;
 			children = (
+				4B87266F1AB6B11700444AF6 /* pinkukyarakuta.png */,
 				4B4CD1331AADD5D700377D36 /* AppDelegate.swift */,
 				4B4CD1351AADD5D700377D36 /* ViewController.swift */,
 				4B4CD1371AADD5D700377D36 /* Main.storyboard */,
@@ -136,7 +147,9 @@
 		6CFE140093C16823A5CC9302 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DA920E1A61C239F8B42CC6A4 /* libPods-Parse-Test-swift.a */,
+				4B8726731AB6FCF000444AF6 /* libPods-Parse-Test-swift-Bolts.a */,
+				4B8726711AB6FCEA00444AF6 /* libPods-Parse-Test-swift.a */,
+				4B1E06AB1AB5B32C007B761A /* MediaPlayer.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -175,6 +188,7 @@
 			);
 			dependencies = (
 				4B4CD1451AADD5D700377D36 /* PBXTargetDependency */,
+				4BDF13951AB531410002EFEA /* PBXTargetDependency */,
 			);
 			name = "Parse-Test-swiftTests";
 			productName = "Parse-Test-swiftTests";
@@ -187,7 +201,7 @@
 		4B4CD1261AADD5D700377D36 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0620;
 				ORGANIZATIONNAME = mycompany;
 				TargetAttributes = {
 					4B4CD12D1AADD5D700377D36 = {
@@ -224,7 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B4CD1391AADD5D700377D36 /* Main.storyboard in Resources */,
-				4BF3AF8E1AB1B10600E3DFBC /* pinkukyarakuta.png in Resources */,
+				4B8726701AB6B11700444AF6 /* pinkukyarakuta.png in Resources */,
 				4B4CD13E1AADD5D700377D36 /* LaunchScreen.xib in Resources */,
 				4B4CD13B1AADD5D700377D36 /* Images.xcassets in Resources */,
 			);
@@ -298,6 +312,11 @@
 			target = 4B4CD12D1AADD5D700377D36 /* Parse-Test-swift */;
 			targetProxy = 4B4CD1441AADD5D700377D36 /* PBXContainerItemProxy */;
 		};
+		4BDF13951AB531410002EFEA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4B4CD12D1AADD5D700377D36 /* Parse-Test-swift */;
+			targetProxy = 4BDF13941AB531410002EFEA /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -354,7 +373,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -390,7 +409,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -404,9 +423,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Parse-Test-swift/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "Parse-Test-swift/Parse-Test-swift-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -419,17 +443,22 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Parse-Test-swift/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "Parse-Test-swift/Parse-Test-swift-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 			};
 			name = Release;
 		};
 		4B4CD1511AADD5D700377D36 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -439,8 +468,10 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "Parse-Test-swiftTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Parse-Test-swift.app/Parse-Test-swift";
 			};
 			name = Debug;
@@ -448,14 +479,15 @@
 		4B4CD1521AADD5D700377D36 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "Parse-Test-swiftTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Parse-Test-swift.app/Parse-Test-swift";
 			};
 			name = Release;
