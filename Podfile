@@ -3,6 +3,7 @@
 
 target 'Parse-Test-swift' do
 pod 'Parse', '~> 1.6.3'
+pod 'SVProgressHUD'
 end
 
 target 'Parse-Test-swiftTests' do

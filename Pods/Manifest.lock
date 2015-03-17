@@ -2,12 +2,15 @@ PODS:
   - Bolts (1.1.4)
   - Parse (1.6.4):
     - Bolts (~> 1.1)
+  - SVProgressHUD (1.1.2)
 
 DEPENDENCIES:
   - Parse (~> 1.6.3)
+  - SVProgressHUD
 
 SPEC CHECKSUMS:
   Bolts: dd9fb8433d67f5acc3b6b4d1379bbc5513d716c1
   Parse: c2610f7a12ad0defc974803b819c4efe7746e6db
+  SVProgressHUD: da7a49e789af645d9279ffbca62318945a832438
 
 COCOAPODS: 0.36.0.rc.1

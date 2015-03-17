@@ -16,6 +16,8 @@
 		4B8726701AB6B11700444AF6 /* pinkukyarakuta.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B87266F1AB6B11700444AF6 /* pinkukyarakuta.png */; };
 		4B8726721AB6FCEA00444AF6 /* libPods-Parse-Test-swift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B8726711AB6FCEA00444AF6 /* libPods-Parse-Test-swift.a */; };
 		4B8726741AB6FCF000444AF6 /* libPods-Parse-Test-swift-Bolts.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B8726731AB6FCF000444AF6 /* libPods-Parse-Test-swift-Bolts.a */; };
+		4B8726A61AB7061D00444AF6 /* ContributionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8726A51AB7061D00444AF6 /* ContributionViewController.swift */; };
+		4B8726A81AB7079700444AF6 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B8726A71AB7079700444AF6 /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,9 @@
 		4B87266F1AB6B11700444AF6 /* pinkukyarakuta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pinkukyarakuta.png; sourceTree = "<group>"; };
 		4B8726711AB6FCEA00444AF6 /* libPods-Parse-Test-swift.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-Parse-Test-swift.a"; path = "Pods/../build/Debug-iphoneos/libPods-Parse-Test-swift.a"; sourceTree = "<group>"; };
 		4B8726731AB6FCF000444AF6 /* libPods-Parse-Test-swift-Bolts.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-Parse-Test-swift-Bolts.a"; path = "Pods/../build/Debug-iphoneos/libPods-Parse-Test-swift-Bolts.a"; sourceTree = "<group>"; };
+		4B8726A51AB7061D00444AF6 /* ContributionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContributionViewController.swift; sourceTree = "<group>"; };
+		4B8726A71AB7079700444AF6 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		4B8726A91AB707A000444AF6 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		4B95819C1AADD9FC00E5B7D2 /* Parse-Test-swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Parse-Test-swift-Bridging-Header.h"; sourceTree = "<group>"; };
 		56775EA95E31B020787B2E40 /* Pods-Parse-Test-swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Parse-Test-swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-Parse-Test-swift/Pods-Parse-Test-swift.release.xcconfig"; sourceTree = "<group>"; };
 		7C68051440029E2DFA6CFADE /* Pods-Parse-Test-swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Parse-Test-swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Parse-Test-swift/Pods-Parse-Test-swift.debug.xcconfig"; sourceTree = "<group>"; };
@@ -60,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B8726A81AB7079700444AF6 /* AVFoundation.framework in Frameworks */,
 				4B8726741AB6FCF000444AF6 /* libPods-Parse-Test-swift-Bolts.a in Frameworks */,
 				4B8726721AB6FCEA00444AF6 /* libPods-Parse-Test-swift.a in Frameworks */,
 			);
@@ -110,6 +116,7 @@
 				4B87266F1AB6B11700444AF6 /* pinkukyarakuta.png */,
 				4B4CD1331AADD5D700377D36 /* AppDelegate.swift */,
 				4B4CD1351AADD5D700377D36 /* ViewController.swift */,
+				4B8726A51AB7061D00444AF6 /* ContributionViewController.swift */,
 				4B4CD1371AADD5D700377D36 /* Main.storyboard */,
 				4B4CD13A1AADD5D700377D36 /* Images.xcassets */,
 				4B4CD13C1AADD5D700377D36 /* LaunchScreen.xib */,
@@ -147,6 +154,8 @@
 		6CFE140093C16823A5CC9302 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4B8726A91AB707A000444AF6 /* AssetsLibrary.framework */,
+				4B8726A71AB7079700444AF6 /* AVFoundation.framework */,
 				4B8726731AB6FCF000444AF6 /* libPods-Parse-Test-swift-Bolts.a */,
 				4B8726711AB6FCEA00444AF6 /* libPods-Parse-Test-swift.a */,
 				4B1E06AB1AB5B32C007B761A /* MediaPlayer.framework */,
@@ -293,6 +302,7 @@
 			files = (
 				4B4CD1361AADD5D700377D36 /* ViewController.swift in Sources */,
 				4B4CD1341AADD5D700377D36 /* AppDelegate.swift in Sources */,
+				4B8726A61AB7061D00444AF6 /* ContributionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,12 +11,12 @@ import UIKit
 class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource{
     @IBOutlet var tableView : UITableView!
     var pictures: NSArray = NSArray()
-    
-
+    var query:PFQuery = PFQuery()
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView!.delegate = self
         tableView!.dataSource = self
+        
         self.loadData { (pictures, error) -> () in
             self.pictures = pictures
             self.tableView.reloadData()
@@ -33,13 +33,14 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     func loadData(callback:([PFObject]!, NSError!) -> ())  {
         
         NSLog("loadData")
-        var query: PFQuery = PFQuery(className:"monsuta")
+        query = PFQuery(className:"monsuta")
         query.orderByAscending("createdAt")
         query.findObjectsInBackgroundWithBlock { (objects: [AnyObject]!, error: NSError!) -> Void in
             if (error != nil){
                 // エラー処理
             }
             callback(objects as [PFObject], error)
+            
             
         }
     
@@ -66,23 +67,28 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         return cell
     }
 
-    @IBAction func tapAddButton(sender: AnyObject) {
-        var object: PFObject = PFObject(className:"monsuta")
-        object["ImageName"] = "PinkMonster"
-        var imageData: NSData = UIImageJPEGRepresentation(UIImage(named: "pinkukyarakuta.png"), 0.1)
-        var file: PFFile = PFFile(name:"pinkukyarakuta.png", data: imageData)
-        object["Image"] = file
-        object.saveInBackgroundWithBlock { (succeeded, error) -> Void in
-            self.loadData { (pictures, error) -> () in
-                self.pictures = pictures
-                self.tableView.reloadData()
-                
-            }
+//    @IBAction func tapAddButton(sender: AnyObject) {
+//        var object: PFObject = PFObject(className:"monsuta")
+//        object["ImageName"] = "PinkMonster"
+//        var imageData: NSData = UIImageJPEGRepresentation(UIImage(named: "pinkukyarakuta.png"), 0.1)
+//        var file: PFFile = PFFile(name:"pinkukyarakuta.png", data: imageData)
+//        object["Image"] = file
+//        object.saveInBackgroundWithBlock { (succeeded, error) -> Void in
+//            self.loadData { (pictures, error) -> () in
+//                self.pictures = pictures
+//                self.tableView.reloadData()
+//                
+//            }
+//
+//            self.tableView.reloadData()
+//        }
+//
+//    }
+//    //音楽をparseにあげる
+    
+    
+    
 
-            self.tableView.reloadData()
-        }
 
-    }
-    //音楽をparseにあげる
 }
 
