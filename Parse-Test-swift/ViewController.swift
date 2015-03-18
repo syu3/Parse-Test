@@ -86,9 +86,8 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
 //    }
 //    //音楽をparseにあげる
     
-    
-    
 
+ 
 
 }
 

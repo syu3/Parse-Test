@@ -33,16 +33,18 @@ class ContributionViewController: UIViewController,UIImagePickerControllerDelega
     
     @IBAction func contribution(sender: AnyObject) {
         SVProgressHUD.show()
-        var object: PFObject = PFObject(className:"monsuta")
-        object["ImageName"] = textfield.text
-        var imageData: NSData = UIImageJPEGRepresentation((UIImage:imageView!.image), 0.1)
-        
 
-        var file: PFFile = PFFile(name:"image.png", data: imageData)
+        var object: PFObject = PFObject(className: "monsuta")
+
+        object["ImageName"] = textfield.text
+        object["ACL"] = "6nhdkBu5FrPdZVjJZTaq7xyyhSmt1Dv7JtX25YWO"
+        var imageData: NSData = UIImageJPEGRepresentation((UIImage:imageView!.image), 0.1)
+        var file: PFFile = PFFile(name: "image.jpg", data: imageData)
         object["Image"] = file
         object.saveInBackgroundWithBlock { (succeeded, error) -> Void in
- 
+            
         }
+
         
         timer=NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: "onUpdate:", userInfo: nil, repeats: true)
 

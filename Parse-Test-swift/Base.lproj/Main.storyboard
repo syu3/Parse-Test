@@ -35,7 +35,6 @@
                                     <navigationItem id="lBq-ca-CGb">
                                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="0p7-WF-EYf">
                                             <connections>
-                                                <action selector="tapAddButton:" destination="jBH-CW-UMj" id="tpj-YE-pNr"/>
                                                 <segue destination="Y0V-NN-1f5" kind="modal" identifier="" id="YYf-Ql-WWE"/>
                                             </connections>
                                         </barButtonItem>
@@ -108,7 +107,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="imageView" destination="4hi-U9-9PQ" id="d6J-ac-dlq"/>
-                        <outlet property="textfield" destination="qlq-ob-brf" id="LQs-GU-TdM"/>
+                        <outlet property="textfield" destination="qlq-ob-brf" id="rGP-fd-EhS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G04-O2-2oE" userLabel="First Responder" sceneMemberID="firstResponder"/>
