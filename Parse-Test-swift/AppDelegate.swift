@@ -20,11 +20,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
 
-        
+        var ID : String = "MZytlnmckAtyM2LFLUVnHoiCmehyjCpi1z7Xjvkg"
+        var Key : String = "9c5BvKZaNKeumyq7BWgxpMgCmqlAvy5WlO8AxtnL"
         // MARK: - Parse
-        Parse.setApplicationId("6nhdkBu5FrPdZVjJZTaq7xyyhSmt1Dv7JtX25YWO", clientKey: "9NqedKauxIvTlIKIJHt92SFOICXcd6mnGLUta28d")
+        Parse.setApplicationId(ID, clientKey:Key)
         PFUser.enableAutomaticUser()
+        //ACL設定
         var defaultACL = PFACL()
+        defaultACL.setPublicReadAccess(true)
         PFACL.setDefaultACL(defaultACL, withAccessForCurrentUser: true)
         
         

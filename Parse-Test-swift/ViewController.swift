@@ -18,13 +18,10 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         tableView!.dataSource = self
         
         self.loadData { (pictures, error) -> () in
-            self.pictures = pictures
-            self.tableView.reloadData()
-           
-        }
-
-//         Do any additional setup after loading the view, typically from a nib.
+        self.pictures = pictures
+        self.tableView.reloadData()
     }
+}
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

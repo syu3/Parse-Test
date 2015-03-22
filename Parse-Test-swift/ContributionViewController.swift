@@ -37,7 +37,7 @@ class ContributionViewController: UIViewController,UIImagePickerControllerDelega
         var object: PFObject = PFObject(className: "monsuta")
 
         object["ImageName"] = textfield.text
-        object["ACL"] = "LmU0ErkwPt"
+        
         var imageData: NSData = UIImageJPEGRepresentation((UIImage:imageView!.image), 0.1)
         var file: PFFile = PFFile(name: "image.jpg", data: imageData)
         object["Image"] = file
