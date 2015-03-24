@@ -14,6 +14,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     var query:PFQuery = PFQuery()
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         tableView!.delegate = self
         tableView!.dataSource = self
         
@@ -59,6 +60,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
             if(error == nil) {
                 cell.imageView!.image = UIImage(data: imageData)!
                 cell.textLabel!.text = self.pictures[indexPath.row].objectForKey("ImageName") as String?
+                
             }
         })
         return cell
@@ -84,7 +86,12 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
 //    //音楽をparseにあげる
     
 
+    @IBAction func delegete(sender: AnyObject) {
+
+        }
+
+
  
 
-}
 
+}

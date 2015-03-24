@@ -20,12 +20,15 @@
                                 <rect key="frame" x="0.0" y="72" width="375" height="595"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="134" id="ZvS-T8-sRW">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" rowHeight="134" id="ZvS-T8-sRW">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZvS-T8-sRW" id="Jem-m9-guD">
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="OpF-5w-RkW" kind="modal" id="cQ4-VH-D64"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -51,7 +54,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RVJ-v6-nty" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="803.5" y="276.5"/>
+            <point key="canvasLocation" x="1068.5" y="673.5"/>
         </scene>
         <!--Contribution View Controller-->
         <scene sceneID="TuD-Qd-tc9">
@@ -112,7 +115,53 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G04-O2-2oE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1234.5" y="276.5"/>
+            <point key="canvasLocation" x="1455.5" y="673.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="v6j-L2-ZEA">
+            <objects>
+                <viewController id="OpF-5w-RkW" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="V8N-FL-p4V"/>
+                        <viewControllerLayoutGuide type="bottom" id="aaS-tf-Q14"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mjx-az-Ruf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7eH-tw-USv">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem title="back" id="oKM-yL-vMy">
+                                        <connections>
+                                            <segue destination="jBH-CW-UMj" kind="modal" id="TbA-Za-iPd"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="8" systemItem="trash" id="glU-ek-ZID">
+                                        <inset key="imageInsets" minX="31" minY="0.0" maxX="-554" maxY="0.0"/>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4w8-o1-wyD">
+                                <rect key="frame" x="16" y="108" width="343" height="343"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fsf-6y-3Wh">
+                                <rect key="frame" x="16" y="440" width="343" height="185"/>
+                                <string key="text">遷移先のTable View ControllerのTable View SectionのRowsは1に変更し、SectionのタイトルをGrayに変更、Activity Indicator Viewを配置します。
+Table ViewのSectionsを2に増</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qsX-0W-RBq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1855.5" y="673.5"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
