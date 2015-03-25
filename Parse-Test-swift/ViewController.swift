@@ -12,11 +12,17 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     @IBOutlet var tableView : UITableView!
     var pictures: NSArray = NSArray()
     var query:PFQuery = PFQuery()
+    var objects = [AnyObject]()
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView!.delegate = self
         tableView!.dataSource = self
+        
+        self.navigationItem.leftBarButtonItem = self.editButtonItem()
+        
+        let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "insertNewObject:")
+        self.navigationItem.rightBarButtonItem = addButton
         
         self.loadData { (pictures, error) -> () in
         self.pictures = pictures
@@ -27,6 +33,11 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    func insertNewObject(sender: AnyObject) {
+        objects.insert(NSDate(), atIndex: 0)
+        let indexPath = NSIndexPath(forRow: 0, inSection: 0)
+        self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
     }
     func loadData(callback:([PFObject]!, NSError!) -> ())  {
         
@@ -45,7 +56,9 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
 
     }
     
-    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
     
     
      func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
@@ -66,6 +79,11 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         return cell
     }
 
+    
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        // Return false if you do not want the specified item to be editable.
+        return true
+    }
 //    @IBAction func tapAddButton(sender: AnyObject) {
 //        var object: PFObject = PFObject(className:"monsuta")
 //        object["ImageName"] = "PinkMonster"
@@ -85,13 +103,18 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
 //    }
 //    //音楽をparseにあげる
     
-
-    @IBAction func delegete(sender: AnyObject) {
-
+     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == .Delete {
+            objects.removeAtIndex(indexPath.row)
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+        } else if editingStyle == .Insert {
+            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
         }
+    }
 
 
- 
+
+
 
 
 }

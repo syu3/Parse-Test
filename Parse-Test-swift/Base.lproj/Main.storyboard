@@ -1,10 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="jBH-CW-UMj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="zTr-1r-w6U">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="66T-f4-jjA">
+            <objects>
+                <navigationController id="zTr-1r-w6U" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1X1-EQ-Tk5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="jBH-CW-UMj" kind="relationship" relationship="rootViewController" id="61m-aj-n01"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3JB-LZ-dfo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="621.5" y="673.5"/>
+        </scene>
+        <!--一覧-->
         <scene sceneID="afD-gW-uae">
             <objects>
                 <viewController storyboardIdentifier="oneView" id="jBH-CW-UMj" customClass="ViewController" customModule="Parse_Test_swift" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,7 +34,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="134" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="xgc-iE-U9w">
-                                <rect key="frame" x="0.0" y="72" width="375" height="595"/>
+                                <rect key="frame" x="0.0" y="2" width="375" height="595"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" rowHeight="134" id="ZvS-T8-sRW">
@@ -26,30 +43,24 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZvS-T8-sRW" id="Jem-m9-guD">
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="OpF-5w-RkW" kind="modal" id="cQ4-VH-D64"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LbT-NP-eDD">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <items>
-                                    <navigationItem id="lBq-ca-CGb">
-                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="0p7-WF-EYf">
-                                            <connections>
-                                                <segue destination="Y0V-NN-1f5" kind="modal" identifier="" id="YYf-Ql-WWE"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="一覧" id="kmt-SW-66B">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="0p7-WF-EYf">
+                            <connections>
+                                <segue destination="Y0V-NN-1f5" kind="modal" identifier="" id="YYf-Ql-WWE"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <nil key="simulatedStatusBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="tableView" destination="xgc-iE-U9w" id="iWo-zK-ms8"/>
+                        <outlet property="tableView" destination="xgc-iE-U9w" id="X2p-DO-duV"/>
+                        <segue destination="OpF-5w-RkW" kind="push" id="Y90-4i-QGH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RVJ-v6-nty" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -115,12 +126,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G04-O2-2oE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1455.5" y="673.5"/>
+            <point key="canvasLocation" x="1068.5" y="1428.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Details View Controller-->
         <scene sceneID="v6j-L2-ZEA">
             <objects>
-                <viewController id="OpF-5w-RkW" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailVC" id="OpF-5w-RkW" customClass="DetailsViewController" customModule="Parse_Test_swift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="V8N-FL-p4V"/>
                         <viewControllerLayoutGuide type="bottom" id="aaS-tf-Q14"/>
@@ -129,19 +140,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7eH-tw-USv">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <items>
-                                    <barButtonItem title="back" id="oKM-yL-vMy">
-                                        <connections>
-                                            <segue destination="jBH-CW-UMj" kind="modal" id="TbA-Za-iPd"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem width="8" systemItem="trash" id="glU-ek-ZID">
-                                        <inset key="imageInsets" minX="31" minY="0.0" maxX="-554" maxY="0.0"/>
-                                    </barButtonItem>
-                                </items>
-                            </toolbar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4w8-o1-wyD">
                                 <rect key="frame" x="16" y="108" width="343" height="343"/>
                             </imageView>
@@ -150,14 +148,39 @@
                                 <string key="text">遷移先のTable View ControllerのTable View SectionのRowsは1に変更し、SectionのタイトルをGrayに変更、Activity Indicator Viewを配置します。
 Table ViewのSectionsを2に増</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wgq-JK-aAl">
+                                <rect key="frame" x="333" y="8" width="42" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="trash" id="pBh-Gh-wTx">
+                                        <connections>
+                                            <action selector="trash:" destination="OpF-5w-RkW" id="Cp2-ty-V7p"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kau-Xj-tuf">
+                                <rect key="frame" x="0.0" y="8" width="333" height="44"/>
+                                <items>
+                                    <barButtonItem title="back" id="Br4-ft-FVr">
+                                        <connections>
+                                            <segue destination="jBH-CW-UMj" kind="modal" id="6uu-qU-be2"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="scT-Hf-9XC"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="imageview" destination="4w8-o1-wyD" id="6CS-s0-pIE"/>
+                        <outlet property="label" destination="fsf-6y-3Wh" id="NMr-AA-29V"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qsX-0W-RBq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -169,4 +192,7 @@ Table ViewのSectionsを2に増</string>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="6uu-qU-be2"/>
+    </inferredMetricsTieBreakers>
 </document>
