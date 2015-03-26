@@ -19,7 +19,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3JB-LZ-dfo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="621.5" y="673.5"/>
+            <point key="canvasLocation" x="-146.5" y="697.5"/>
         </scene>
         <!--一覧-->
         <scene sceneID="afD-gW-uae">
@@ -60,12 +60,11 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="tableView" destination="xgc-iE-U9w" id="X2p-DO-duV"/>
-                        <segue destination="OpF-5w-RkW" kind="push" id="Y90-4i-QGH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RVJ-v6-nty" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1068.5" y="673.5"/>
+            <point key="canvasLocation" x="596.5" y="697.5"/>
         </scene>
         <!--Contribution View Controller-->
         <scene sceneID="TuD-Qd-tc9">
@@ -126,7 +125,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G04-O2-2oE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1068.5" y="1428.5"/>
+            <point key="canvasLocation" x="1332.5" y="697.5"/>
         </scene>
         <!--Details View Controller-->
         <scene sceneID="v6j-L2-ZEA">
@@ -164,11 +163,7 @@ Table ViewのSectionsを2に増</string>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kau-Xj-tuf">
                                 <rect key="frame" x="0.0" y="8" width="333" height="44"/>
                                 <items>
-                                    <barButtonItem title="back" id="Br4-ft-FVr">
-                                        <connections>
-                                            <segue destination="jBH-CW-UMj" kind="modal" id="6uu-qU-be2"/>
-                                        </connections>
-                                    </barButtonItem>
+                                    <barButtonItem title="back" id="Br4-ft-FVr"/>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -184,7 +179,7 @@ Table ViewのSectionsを2に増</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qsX-0W-RBq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1855.5" y="673.5"/>
+            <point key="canvasLocation" x="1841.5" y="697.5"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -192,7 +187,4 @@ Table ViewのSectionsを2に増</string>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
-    <inferredMetricsTieBreakers>
-        <segue reference="6uu-qU-be2"/>
-    </inferredMetricsTieBreakers>
 </document>
