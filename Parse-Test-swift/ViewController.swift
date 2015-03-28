@@ -12,7 +12,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     @IBOutlet var tableView : UITableView!
     var pictures: NSArray = NSArray()
     var query:PFQuery = PFQuery()
-    var objects = [AnyObject]()
+    var objectss = [AnyObject]()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,10 +24,12 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
 //        let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "insertNewObject:")
 //        self.navigationItem.rightBarButtonItem = addButton
         
+        //---------------------------------------
         self.loadData { (pictures, error) -> () in
         self.pictures = pictures
         self.tableView.reloadData()
     }
+        //---------------------------------------
 }
 
     override func didReceiveMemoryWarning() {
@@ -39,16 +41,17 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
 //        let indexPath = NSIndexPath(forRow: 0, inSection: 0)
 //        self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
 //    }
+    //------------------------------------------------------
     func loadData(callback:([PFObject]!, NSError!) -> ())  {
         
         NSLog("loadData")
         query = PFQuery(className:"monsuta")
         query.orderByAscending("createdAt")
-        query.findObjectsInBackgroundWithBlock { (objects: [AnyObject]!, error: NSError!) -> Void in
+        query.findObjectsInBackgroundWithBlock { (objectss, error: NSError!) -> Void in
             if (error != nil){
                 // エラー処理
             }
-            callback(objects as [PFObject], error)
+            callback(objectss as [PFObject], error)
             
             
         }
@@ -70,6 +73,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as UITableViewCell
         var imageFile: PFFile? = self.pictures[indexPath.row].objectForKey("Image") as PFFile?
         imageFile?.getDataInBackgroundWithBlock({ (imageData, error) -> Void in
+            self.objectss = self.pictures
             if(error == nil) {
                 cell.imageView!.image = UIImage(data: imageData)!
                 cell.textLabel!.text = self.pictures[indexPath.row].objectForKey("ImageName") as String?
@@ -78,12 +82,14 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         })
         return cell
     }
-
+//---------------------------------------------
     
-    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
+//    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+//        // Return false if you do not want the specified item to be editable.
+//        return true
+//    }
+    
+    
 //    @IBAction func tapAddButton(sender: AnyObject) {
 //        var object: PFObject = PFObject(className:"monsuta")
 //        object["ImageName"] = "PinkMonster"
@@ -105,16 +111,21 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     
      func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
-            objects.removeAtIndex(indexPath.row)
+            NSLog("hello")
+          //ここに削除コードを書く
+            objectss.removeAtIndex(indexPath.row)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
         }
     }
 
+    @IBAction func refrsh(sender: AnyObject) {
+        self.loadData { (pictures, error) -> () in
+            self.pictures = pictures
+            self.tableView.reloadData()
+        }
 
-
-
-
-
+    }
 }
